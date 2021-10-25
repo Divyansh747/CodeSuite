@@ -119,12 +119,29 @@ public class CompileRequest {
 		return new Result(statusResponse, builder.toString());
 	}
 
-	private void UploadFiles(MultipartFile file, String filename) throws IOException {
+	public void savePracticeQuestion(MultipartFile file, String filename) throws IOException {
 		byte[] data = file.getBytes();
 		Path loc = Paths.get(filename);
 		Files.write(loc, data);
 	}
 	
+	public void savePracticeQuestionTestCase(MultipartFile file, String filename) throws IOException {
+		byte[] data = file.getBytes();
+		Path loc = Paths.get(filename);
+		Files.write(loc, data);
+	}
+	
+	public void savePracticeQuestionTestCaseAnswer(MultipartFile file, String filename) throws IOException {
+		byte[] data = file.getBytes();
+		Path loc = Paths.get(filename);
+		Files.write(loc, data);
+	}
+	
+	private void UploadFiles(MultipartFile file, String filename) throws IOException {
+		byte[] data = file.getBytes();
+		Path loc = Paths.get(filename);
+		Files.write(loc, data);
+	}
 	
 	private boolean removeFiles(String folder, String file) {
 		if(folder != null && file != null) {
