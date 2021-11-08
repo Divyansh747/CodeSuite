@@ -12,5 +12,4 @@ public interface PracticeRepository extends JpaRepository<PracticeEntity, Long> 
 
 	List<PracticeEntity> findAll();
 	
-	
 }
