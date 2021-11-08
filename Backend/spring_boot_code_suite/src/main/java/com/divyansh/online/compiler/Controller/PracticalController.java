@@ -41,7 +41,7 @@ public class PracticalController {
 		String tcAnsFilename = "practice/TestCase/" + practical.getEmail() + "_TestCaseAns" + timestamp + ".txt";
 		
 		try {
-			compileRequest.savePracticeQuestion(practical.getQuestion(), qFilename);	
+			compileRequest.savePracticeQuestion(practical.getQuestion(), qFilename);
 			compileRequest.savePracticeQuestionTestCase(practical.getTestcase(), tcFilename);
 			compileRequest.savePracticeQuestionTestCaseAnswer(practical.getTestcaseAns(), tcAnsFilename);
 			
