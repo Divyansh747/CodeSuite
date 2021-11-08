@@ -143,6 +143,12 @@ public class CompileRequest {
 		Files.write(loc, data);
 	}
 	
+	public void uploadAboutContest(MultipartFile file, String filename) throws IOException {
+		byte[] data = file.getBytes();
+		Path loc = Paths.get(filename);
+		Files.write(loc, data);
+	}
+	
 	private boolean removeFiles(String folder, String file) {
 		if(folder != null && file != null) {
 			String filename = folder+"/"+file;
