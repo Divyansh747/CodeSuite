@@ -71,11 +71,23 @@ public class ContestController {
 		return ResponseEntity.ok(contestRepository.findAll());
 	}
 
-	/*@CrossOrigin(origins = "*", allowedHeaders = "*")
+	@CrossOrigin(origins = "*", allowedHeaders = "*")
 	@GetMapping("/contest/{ContestID}")
 	public ResponseEntity<?> getContestByID(@PathVariable(value="ContestID") Long ContestID) throws Exception {
 		return ResponseEntity.ok(contestRepository.findByContestID(ContestID));
-	}*/
+	}
+	
+	@CrossOrigin(origins = "*", allowedHeaders = "*")
+	@GetMapping("/contest/{ContestID}/questions")
+	public ResponseEntity<?> getQuestionByContestID(@PathVariable(value="ContestID") Long ContestID) throws Exception {
+		return ResponseEntity.ok(contestQnRepository.findQuestionByContestID(ContestID));
+	}
+	
+	@CrossOrigin(origins = "*", allowedHeaders = "*")
+	@GetMapping("/contest/{ContestID}/{QuestionID}")
+	public ResponseEntity<?> getQuestionByQuestionID(@PathVariable(value="ContestID") Long ContestID, @PathVariable(value="QuestionID") Long QuestionID) throws Exception {
+		return ResponseEntity.ok(contestQnRepository.findQuestionByQuestionID(ContestID, QuestionID));
+	}	
 	                                                           
 	@CrossOrigin(origins = "*", allowedHeaders = "*")
 	@PostMapping("/contest/{ContestID}/createQn")

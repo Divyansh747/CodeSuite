@@ -36,6 +36,10 @@ public class ContestQnEntity {
 	@NaturalId(mutable = true)
 	private String Q_TestcaseAns;
 	
+	public ContestQnEntity() {
+		super();
+	}
+
 	public ContestQnEntity(String q_Email, Long q_ContestID, String q_Title, String q_Type, String q_Hints,
 			String q_RelatedTopic, String q_NoOfTestCase, String q_Question, String q_Testcase, String q_TestcaseAns) {
 		super();
