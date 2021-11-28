@@ -74,6 +74,12 @@ public class PracticalController {
 		return ResponseEntity.ok(practiceRepository.findAll());
 	}
 	
+	@CrossOrigin(origins = "*", allowedHeaders = "*")
+	@GetMapping("/practice/question/{qid}")
+	public ResponseEntity<?> getQuestionByID(@PathVariable(value="qid") Long QID) throws Exception {
+		return ResponseEntity.ok(practiceRepository.findQuestionByQID(QID));
+	}
+	
 	@GetMapping("/practice/PracticeQn/{filename:.+}")
 	@ResponseBody
 	public ResponseEntity<InputStreamResource> fetchPracticeQn(@PathVariable String filename) throws FileNotFoundException {
