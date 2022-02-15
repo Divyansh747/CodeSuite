@@ -1,7 +1,7 @@
 version: '3.7'
 
 services:
-  compiler-db:
+  codesuite-db:
     image: mysql
     restart: on-failure
       #network_mode: "host"
@@ -15,28 +15,28 @@ services:
     networks:
       - backend
 
-  compiler-frontend:
-    image: compiler-frontend
+  codesuite-frontend:
+    image: codesuite-frontend
     restart: on-failure
       #network_mode: "host"
     depends_on:
-      - compiler-backend
+      - codesuite-backend
     ports:
       - 3000:3000
     networks:
       - frontend
  
-  compiler-backend:
-    image: compiler-backend
+  codesuite-backend:
+    image: codesuite-backend
     restart: on-failure
       #network_mode: "host"
     depends_on:
-      - compiler-db
+      - codesuite-db
     ports:
       - 8080:8080
     environment:
       - DATABASE_HOST=compiler-db
-      - DATABASE_USER=compiler
+      - DATABASE_USER=root
       - DATABASE_PASSWORD=compiler
       - DATABASE_NAME=compiler
       - DATABASE_PORT=3306
