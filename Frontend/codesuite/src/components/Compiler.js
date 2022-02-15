@@ -1,8 +1,9 @@
-import React from 'react'
+ import React from 'react'
 import {Form, FormGroup, Input, Container, Button, Spinner} from 'reactstrap'
 import axios from 'axios'
 import api from '../api/api.js'
-import { Jumbotron } from 'reactstrap';
+import  {Jumbotron}  from 'reactstrap';
+
 
 class Compiler extends React.Component {
 
@@ -31,7 +32,7 @@ class Compiler extends React.Component {
     onChangeFirst(e) {
         this.setState({
             codeFile: e.target.files[0], 
-        })
+            })
     }
 
     onChangeSecond(e) {
@@ -49,7 +50,6 @@ class Compiler extends React.Component {
             ).then((response) => {
                 console.log(response)
             } )
-        
     }
 
     postDataToServer(codeFile, inputFile) {
@@ -63,7 +63,7 @@ class Compiler extends React.Component {
             statusCode: [],
             isLoading: true 
         })
-        return axios.post(`${api}/${language}`, formData, config).then(
+        return axios.post(`${api}/language/${language}`, formData, config).then(
             (response) =>  {
                 console.log(response)
                 console.log("compiler api called")
@@ -81,7 +81,7 @@ class Compiler extends React.Component {
 
 render() {
     return(
-        <div>
+        <div className="comp-container"> 
             <Jumbotron>
             <h1 className="text-center">Compiler</h1>
             </Jumbotron>
