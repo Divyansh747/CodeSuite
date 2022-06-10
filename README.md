@@ -68,7 +68,7 @@ mvn package -DskipTests
 ```
 sudo docker build -t codesuite-backend .
 ```
-- Go back to Minor_Project_Online_Compiler/ 
+- Go back to spring_boot_code_suite/ 
 ```
 cd ../..
 ```
