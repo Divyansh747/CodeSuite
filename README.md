@@ -32,10 +32,12 @@
     Container Engine => Docker
     
 ## Project System Design
+- Use Case Diagram 
+![image](https://github.com/Divyansh747/CodeSuite/blob/main/Screenshot_20220610-223945~2.jpg)
 
-![image]() WIP
-
-
+- Deployment Diagram
+![image](https://github.com/Divyansh747/CodeSuite/blob/main/Screenshot_20220610-223926~2.jpg) 
+ 
 ## Requirements (For Development and Testing) 
 
 - Java 8 (JDK+JRE)
