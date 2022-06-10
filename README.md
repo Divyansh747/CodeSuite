@@ -5,7 +5,22 @@
 
 ## About Project
 
-> WIP
+> 
+- Supports JWT Authentication integrated on Spring Boot backend with ReactJS frontend.
+- Supports multiuser login and signup facilities with MySQL used as storage for credentials. 
+- Supports Manually created restAPI which provide compiler facilities in multiple languages 
+  like C, C++, Java, Python (easy to integrate new languages as per requirements)
+- Compiler provide individual processing of code with the help of Docker Container technology. 
+  When code compilation starts new container launched and result will be send back to user as 
+  response of API and container deletes itself
+- Supports create competition section and create questions according to individual contest  
+  with answer checking capabilities.
+- Supports Practice section where any user can upload problem with required testcases and 
+  anyone could solve it and verify their solutions.
+- Ui/UX is beautifully designed with clean and bug free, light weight using ReactJS
+- Both frontend and backend deployed in Docker to avoid deployment related problems and 
+  provides easy to pod up and pod down according to user load.
+>
 
 ## Technology Used
 
